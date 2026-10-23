@@ -7,5 +7,7 @@ namespace SSD_Lab1EB.Data
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options)
     {
         public DbSet<Company> Company { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Service> Service { get; set; }
     }
 }
