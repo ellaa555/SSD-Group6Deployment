@@ -1,0 +1,17 @@
+.vs/
+bin/
+obj/
+
+*.user
+*.suo
+
+*.pubxml
+*.pubxml.user
+*.publishproj
+*.publishsettings
+
+secrets.json
+
+*.mdf
+*.ldf
+*.ndf
