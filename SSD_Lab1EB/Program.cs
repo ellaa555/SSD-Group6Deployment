@@ -26,12 +26,10 @@ namespace SSD_Lab1EB
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
-            // load seeded-user pw from User Secrets
-            if (app.Environment.IsDevelopment())
-            {
-                var secrets = builder.Configuration.GetSection("Secrets").Get<AppSecrets>();
-                if (secrets != null) { DbInitializer.SetAppSecrets(secrets); }
-            }
+            // load seeded-user pw from User Secrets            
+            var secrets = builder.Configuration.GetSection("Secrets").Get<AppSecrets>();
+            if (secrets != null) { DbInitializer.SetAppSecrets(secrets); }
+
 
             // seed the DB with initial roles and users
             using (var scope = app.Services.CreateScope())

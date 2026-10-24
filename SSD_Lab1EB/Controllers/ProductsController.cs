@@ -52,7 +52,7 @@ public class ProductsController : Controller
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Roles = "Supervisor")]
-    public async Task<IActionResult> Create([Bind("Id,Name,Description,Category,Price,StockQuantity,IsActive")] Product product)
+    public async Task<IActionResult> Create([Bind("Name,Description,Category,Price,StockQuantity,IsActive")] Product product)
     {
         if (ModelState.IsValid)
         {

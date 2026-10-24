@@ -52,7 +52,7 @@ public class ServicesController : Controller
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Roles = "Supervisor")]
-    public async Task<IActionResult> Create([Bind("Id,Name,Description,Category,HourlyRate,DurationMinutes,IsAvailable")] Service service)
+    public async Task<IActionResult> Create([Bind("Name,Description,Category,HourlyRate,DurationMinutes,IsAvailable")] Service service)
     {
         if (ModelState.IsValid)
         {
