@@ -11,7 +11,7 @@ An ASP.NET Core MVC web app (.NET 10) with ASP.NET Identity and role based acces
 
 ## Live Site
 
-- URL: [Live Website](https://group6deploy-001-site1.gtempurl.com/)
+- URL: https://group6deploy-001-site1.gtempurl.com/
 - Test account logins are provided in our submission document.
 
 ## Prerequisites
