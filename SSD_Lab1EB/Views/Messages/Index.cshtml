@@ -1,0 +1,38 @@
+@model IEnumerable<SSD_Lab1EB.Models.Message>
+
+@{
+    ViewData["Title"] = "Message Board";
+}
+
+<h1>Message Board</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Post a Message</a>
+</p>
+
+@if (!Model.Any())
+{
+    <p>No messages yet. Be the first to post!</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Author)</th>
+                <th>@Html.DisplayNameFor(model => model.PostedAt)</th>
+                <th>@Html.DisplayNameFor(model => model.Content)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Author)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PostedAt)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Content)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
