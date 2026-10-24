@@ -54,7 +54,7 @@ public class CompaniesController : Controller
     [Authorize(Roles = "Supervisor")]
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Name,YearsInBusiness,Website,Province")] Company company)
+    public async Task<IActionResult> Create([Bind("Name,YearsInBusiness,Website,Province")] Company company)
     {
         if (ModelState.IsValid)
         {
